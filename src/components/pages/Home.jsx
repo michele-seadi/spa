@@ -3,9 +3,17 @@ import aluno_01 from '../../img/aluno_01.jpg'
 import aluno_02 from '../../img/aluno_02.jpg'
 import aluno_03 from '../../img/aluno_03.jpg'
 import aluno_04 from '../../img/aluno_04.jpg'
-
+import React, { useState } from 'react';
+import Carousel from 'react-bootstrap/Carousel';
 
 function Home(){
+
+    const [index, setIndex] = useState(0);
+
+  const handleSelect = (selectedIndex, e) => {
+    setIndex(selectedIndex);
+  };
+
     return (
     <>
         {/*  Primeira Imagem */}
@@ -113,12 +121,50 @@ function Home(){
                 <button type="button" className="button">Conhecer</button>
             </div>
         
-            {/* <!--</div>--> */}
-
-        
+            {/* <!--</div>--> */} 
         </section> 
+        {/* Carousel */}
+        <section>
+        <Carousel activeIndex={index} onSelect={handleSelect}>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={aluno_01}
+          alt="First slide"
+        />
+        <Carousel.Caption>
+          <h3>Antônio Nunes</h3>
+          <p>"Hoje me sinto muito mais segura em assuntos relacionados à tecnologias!"</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={aluno_02}
+          alt="Second slide"
+        />
 
+        <Carousel.Caption>
+          <h3>Juliana Pereira</h3>
+          <p>Com a Zetta eu consegui ir mais longe. - Cursou JavaScript Avançado</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={aluno_03}
+          alt="Third slide"
+        />
 
+        <Carousel.Caption>
+          <h3>Ana Luiza</h3>
+          <p>
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+          </p>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
+        </section>
     </>
     )
 }

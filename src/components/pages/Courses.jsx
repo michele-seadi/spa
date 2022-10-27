@@ -6,7 +6,7 @@ function Courses() {
           <div className="m-4">
             <h1 className="text-center">Cursos</h1>
             <h3 className="text-center" style={{ color: "#295872" }}>
-              Muitos cursos de básico ao avançado
+              Muitos cursos do básico ao avançado
             </h3>
           </div>
           <div className="row ">
@@ -25,7 +25,7 @@ function Courses() {
                   className="form-select form-select-sm"
                   aria-label=".form-select-sm example"
                 >
-                  <option selected="">Qual o seu nível de conhecimento</option>
+                  <option selected="">Qual o seu nível de conhecimento?</option>
                   <option value={1}>Todos</option>
                   <option value={2}>Básico</option>
                   <option value={3}>Intermediário</option>
