@@ -1,0 +1,1 @@
+instalamos: react-router-dom, react-icon, json-server, uuid
