@@ -5,6 +5,7 @@ import aluno_03 from '../../img/aluno_03.jpg'
 import aluno_04 from '../../img/aluno_04.jpg'
 import React, { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
+import Button from 'react-bootstrap/Button';
 
 function Home(){
 
@@ -27,7 +28,7 @@ function Home(){
                     <h1 className="display-5 fw-bold lh-1 mb-3">Do zero ao Tech</h1>
                     <p className="lead">Cursos do iniciante ao avançado, comece hoje mesmo e dê um upgrade na sua carreira.</p>
                     <div className="d-grid gap-2 d-md-flex justify-content-md-start">
-                      <button type="button" className="btn btn-primary btn-lg px-4 me-md-2">Cadastre-se</button>
+                    <Button href="/cadastro" type="button" className="btn btn-primary btn-lg px-4 me-md-2">Cadastre-se</Button>
                     </div>
                   </div>
                 </div>
